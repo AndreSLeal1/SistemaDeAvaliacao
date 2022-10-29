@@ -1,0 +1,251 @@
+body {
+    background: #62b84d;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.titulo {
+    font: normal 30pt Arial;
+    padding: 8px;
+    margin: 15px;
+    text-align: center;
+}
+
+.sub-title {
+    font: normal 22pt Arial;
+    padding: 2px;
+    margin-left: 15px;
+    margin-top: 11px;
+}
+
+.title-contato {
+    font: normal 16pt Arial;
+    padding: 1px;
+    margin: 5px;
+}
+
+.form-nota {
+    background: #d0e093;
+    border-radius: 20px;
+    width: 640px;
+    height: 160px;
+    align-items: center;
+    inline-size: center;
+    text-align: center;
+    margin: auto;
+}
+
+#form-sugest {
+    background: #d0e093;
+    position: absolute;
+    top: 200px;
+    border-radius: 20px;
+    width: 320px;
+    height: 180px;
+    right: 220px;
+    text-align: center;
+}
+#form-contato{
+    background: #d0e093;
+    position: absolute;
+    top: 200px;
+    border-radius: 20px;
+    left: 260px;
+    width: 320px;
+    height: 180px;
+    text-align: center;
+}
+.sugestao {
+    border-radius: 20px;
+    background-color: rgb(199, 226, 187);
+    display: block;
+    padding: 8px;
+    margin: 10px;
+    width: 300px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+}
+.container {
+    width: 640px;
+    height: 160px;
+}
+#container-footer-img-fim {
+    text-align: center;
+    margin-top: 280px;
+}
+#container-footer-1{
+    text-align: center;
+    margin-top: -30px;
+}
+#container-footer-2{
+    text-align: center;
+    margin-top: -100px; 
+}
+.copy{
+    font-size: 12pt;
+    color: white;
+    margin: auto;
+}
+.icon {
+    padding: 2px;
+    margin-inline: 2px;
+    position: relative;
+    top: -20px;
+    margin-right: 5px;
+}
+
+.text-msg {
+    border-radius: 20px;
+    background-color: rgb(199, 226, 187);
+    display: block;
+    padding: 8px;
+    margin: auto;
+    width: 650px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+}
+
+textarea::placeholder {
+    font-size: 1.5em;
+}
+input::placeholder{
+    font-size: 1.5em;
+}
+
+input[type='tel'] {
+    border-radius: 20px;
+    background-color: rgb(200, 231, 187);
+    display: inline-block;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    border: 2px solid rgb(224, 222, 222);
+}
+
+.nota {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    margin: 1px;
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    margin-left: 2px;
+    align-items: center;
+}
+
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+
+}
+
+[type=radio]+img {
+    cursor: pointer;
+}
+
+[type=radio]:checked+img {
+    outline: 2px solid rgb(3, 7, 2);
+}
+
+.next-fim {
+    position: relative;
+    display: flex;
+    top: 274px;
+    right: -998px;
+    width: 60px;
+    cursor: pointer;
+    animation: set 1s ease-in-out infinite;
+}
+.prev-fim {
+    position: relative;
+    display: flex;
+    top: 204px;
+    left: 149px;
+    width: 60px;
+    cursor: pointer;
+    animation: set2 1s ease-in infinite reverse both running;
+}
+.next{
+    position: relative;
+    display: flex;
+    top: -324px;
+    right: -987px;
+    width: 60px;
+    cursor: pointer;
+    animation: set 1s ease-in-out infinite;
+}
+.prev{
+    position: relative;
+    display: flex;
+    top: -394px;
+    left: 120px;
+    width: 60px;
+    cursor: pointer;
+    animation: set2 1s ease-in infinite reverse both running; 
+}
+@keyframes set {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(10px, 0);
+    }
+}
+
+@keyframes set2 {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(10px, 0);
+    }
+}
+
+.d-none {
+    display: none;
+}
+
+@media only screen and (min-width:768px) and (max-width: 1024px) {
+.next{
+    right: -855px;
+}
+.prev{
+    left: 100px;
+}
+.next-fim {
+    position: relative;
+    display: flex;
+    left: 891px;
+    width: 60px;
+    cursor: pointer;
+    animation: set 1s ease-in-out infinite;
+}
+.prev-fim {
+    left: 110px;
+}  
+#form-contato{ 
+    left: 199px;
+}
+#form-sugest {
+    background: #d0e093;
+    position: absolute;
+    top: 200px;
+    border-radius: 20px;
+    width: 320px;
+    height: 180px;
+    right: 150px;
+    text-align: center;
+}
+}
+    

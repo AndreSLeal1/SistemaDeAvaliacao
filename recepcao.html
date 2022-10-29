@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Sistema de avaliação</title>
+</head>
+<body>
+    <div>
+        <!-- Começa o form -->
+        <form id="userAccountSetupForm" name="userAccountSetupForm" method="POST">
+            <!-- Step 1 -->
+            <section id="step-1" class="step form-step d-none tab">
+                <header>
+                    <h1 class="titulo">De 0 a 5, como você avalia a <br> experiência com o laboratório?</h1>
+                </header>
+                <section class="form-nota">
+                    <h2 class="sub-title">Atendimento na Recepcão</h2>
+                    <div class="container">
+                        <img src="img/recep.png" alt="Icone Recepcionista" width="78px" class="icon">
+                        <label>
+                            <input type="radio" id="test" name="receptionAttendance" value="0" oninput="this.className" form="form-radio">
+                            <img src="img/numero-0.png" alt="Option 0" class="nota">
+                        </label>
+                
+                        <label>
+                            <input type="radio" id="test" name="receptionAttendance" value="1" oninput="this.className" form="form-radio">
+                            <img src="img/numero-1.png" alt="Option 1" class="nota">
+                            
+                        </label>
+
+                        <label>
+                            <input type="radio" id="test" name="receptionAttendance" value="2" oninput="this.className" form="form-radio">
+                            <img src="img/numero-2.png" alt="Option 2" class="nota">
+                        </label>
+
+                        <label>
+                            <input type="radio" id="test" name="receptionAttendance" value="3" oninput="this.className" form="form-radio">
+                            <img src="img/numero-3.png" alt="Option 3" class="nota">
+                        </label>
+
+                        <label>
+                            <input type="radio" id="test" name="receptionAttendance" value="4" oninput="this.className" form="form-radio">
+                            <img src="img/numero-4.png" alt="Option 4" class="nota">
+                        </label>
+
+                        <label>
+                            <input type="radio" id="test" name="receptionAttendance" value="5" oninput="this.className" form="form-radio">
+                            <img src="img/numero-5.png" alt="Option 5" class="nota">
+                        </label>
+                    </div>
+                </section>
+                <br>
+                <section class="form-nota">
+                    <h2 class="sub-title">Tempo de espera na Recepção</h2>
+                    <div>
+                        <img src="img/relogio.png" alt="Icone Relógio" class="icon" width="78px">
+                        <label>
+                            <input type="radio" id="teste" name="receptionTime" value="0" oninput="this.className"  form="form-radio">
+                            <img src="img/numero-0.png" alt="Option 0" class="nota">
+                        </label>
+                
+                        <label>
+                            <input type="radio" id="teste" name="receptionTime" value="1" oninput="this.className" form="form-radio">
+                            <img src="img/numero-1.png" alt="Option 1" class="nota">
+                        </label>
+
+                        <label>
+                            <input type="radio" id="teste" name="receptionTime" value="2" oninput="this.className" form="form-radio">
+                            <img src="img/numero-2.png" alt="Option 2" class="nota">
+                        </label>
+
+                        <label>
+                            <input type="radio" id="teste" name="receptionTime" value="3" oninput="this.className" form="form-radio">
+                            <img src="img/numero-3.png" alt="Option 3" class="nota">
+                        </label>
+
+                        <label>
+                            <input type="radio" id="teste" name="receptionTime" value="4" oninput="this.className" form="form-radio">
+                            <img src="img/numero-4.png" alt="Option 4" class="nota">
+                        </label>
+
+                        <label>
+                            <input type="radio" id="teste" name="receptionTime" value="5" oninput="this.className" form="form-radio">
+                            <img src="img/numero-5.png" alt="Option 5" class="nota">
+                        </label>
+                    </div>
+                </section>
+                <br>
+                <div>
+                    <textarea rows="5" cols="100" id="mensagem" name="receptionNote" class="text-msg" placeholder="Em poucas palavras, descreva aqui o que motivou sua nota."></textarea>
+                </div>
+                <img class="next btn-navigate-form-step btn3" step_number="2" onclick="nextPrev(1)" src="./img/next.png" alt="Próximo" height="70px">
+                <div id="container-footer-1">
+                    <img src="/img/logo-altech.png">
+                    <p class="copy">Desenvolvido por &copy; Altech</p>
+                </div>
+            </section>
+            <!-- Step 2 Content, default hidden on page load. -->
+            <section id="step-2" class="step form-step d-none tab">
+                <header>
+                    <h1 class="titulo">De 0 a 5, como você avalia a <br> experiência com o laboratório?</h1>
+                </header>
+                    <section class="form-nota" >
+                        <h2 class="sub-title">Atendimento na Coleta</h2>
+                        <div class="container">
+                            <img src="img/enfe.png" alt="Icone Enfermeira" width="78px" class="icon">
+                            <label>
+                                <input type="radio" id="test" name="collectAttendante" value="0" oninput="this.className" form="form-radio">
+                                <img src="img/numero-0.png" alt="Option 0" class="nota">
+                            </label>
+                    
+                            <label>
+                                <input type="radio" id="test" name="collectAttendante" value="1" oninput="this.className" form="form-radio">
+                                <img src="img/numero-1.png" alt="Option 1" class="nota">
+                            </label>
+                            
+                            <label>
+                                <input type="radio" id="test" name="collectAttendante" value="2" oninput="this.className" form="form-radio">
+                                <img src="img/numero-2.png" alt="Option 2" class="nota">
+                            </label>
+            
+                            <label>
+                                <input type="radio" id="test" name="collectAttendante" value="3" oninput="this.className" form="form-radio">
+                                <img src="img/numero-3.png" alt="Option 3" class="nota">
+                            </label>
+            
+                            <label>
+                                <input type="radio" id="test" name="collectAttendante" value="4" oninput="this.className" form="form-radio">
+                                <img src="img/numero-4.png" alt="Option 4" class="nota">
+                            </label>
+            
+                            <label>
+                                <input type="radio" id="test" name="collectAttendante" value="5" oninput="this.className" form="form-radio">
+                                <img src="img/numero-5.png" alt="Option 5" class="nota">
+                            </label>
+                        </div>
+                    </section>
+                    <br>
+                    <section class="form-nota">
+                        <h2 class="sub-title">Tempo de espera na Coleta</h2>
+                        <div>
+                            <img src="img/relogio.png" alt="Icone Relógio" class="icon" width="77px">
+                            <label>
+                                <input type="radio" id="teste" name="collectTime" value="0" oninput="this.className" form="form-radio">
+                                <img src="img/numero-0.png" alt="Option 0" class="nota">
+                            </label>
+                    
+                            <label>
+                                <input type="radio" id="teste" name="collectTime" value="1" oninput="this.className" form="form-radio">
+                                <img src="img/numero-1.png" alt="Option 1" class="nota">
+                            </label>
+            
+                            <label>
+                                <input type="radio" id="teste" name="collectTime" value="2" oninput="this.className" form="form-radio">
+                                <img src="img/numero-2.png" alt="Option 2" class="nota">
+                            </label>
+            
+                            <label>
+                                <input type="radio" id="teste" name="collectTime" value="3" oninput="this.className" form="form-radio">
+                                <img src="img/numero-3.png" alt="Option 3" class="nota">
+                            </label>
+            
+                            <label>
+                                <input type="radio" id="teste" name="collectTime" value="4" oninput="this.className" form="form-radio">
+                                <img src="img/numero-4.png" alt="Option 4" class="nota">
+                            </label>
+            
+                            <label>
+                                <input type="radio" id="teste" name="collectTime" value="5" oninput="this.className" form="form-radio">
+                                <img src="img/numero-5.png" alt="Option 5" class="nota">
+                            </label>
+                        </div>
+                    </section>
+                    <br>
+                    <div>
+                        <textarea rows="5" cols="100" id="mensagem" name="collectNote" class="text-msg" placeholder="Em poucas palavras, descreva aqui o que motivou sua nota."></textarea>
+                    </div>
+                    <img class="next btn-navigate-form-step btn3" step_number="3" onclick="nextPrev(1)" src="./img/next.png" alt="Próximo" height="70px">
+                    <img class="prev btn-navigate-form-step" step_number="1" onclick="nextPrev(-1)" src="./img/prev.png" alt="Voltar" height="70px">
+                    <div id="container-footer-2">
+                        <img src="/img/logo-altech.png">
+                       <p class="copy">Desenvolvido por &copy; Altech</p>
+                    </div>
+            </section> 
+            <!-- Step 3 -->
+            <section id="step-3" class="step form-step d-none tab">
+                <section id="form-contato">
+                    <div>
+                       <p class="title-contato">Deseja fornecer o seu telefone? (opcional) </p>
+                        <div>
+                            <input type="tel" id="telclient" name="telContact" placeholder="(xx) xxxx-xxxx" pattern="^\(d{2}\)\d{4,5}-\d{4}$"><br>
+                        </div>
+                    </div>
+                </section>
+                <section id="form-sugest">
+                    <div>
+                        <p class="title-contato">Deseja fornecer uma sugestão? (opcional) </p>
+                        <div>
+                            <textarea class="sugestao" rows="5" cols="100" id="mensagem" name="sugestNote" placeholder="Coloque aqui sua sugestão"></textarea>
+                        </div>
+                    </div> 
+                </section>
+                    <img id="reload" class="next-fim submit-btn btn3" onclick="nextPrev()" src="./img/next.png" alt="Concluir" height="70px">
+                    <img  class="prev-fim btn-navigate-form-step" step_number="2" onclick="nextPrev(-1)" src="./img/prev.png" alt="Voltar" height="70px">
+                <div id="container-footer-img-fim">
+                    <img src="/img/logo-altech.png">
+                    <p class="copy">Desenvolvido por &copy; Altech</p>
+                </div>
+            </section>  
+        </form>
+    </div>
+</body>
+</html>
